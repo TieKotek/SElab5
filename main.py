@@ -61,7 +61,6 @@ class Window():
         self.ui.webview.setHtml("")
         self.ui.code_label.setText("")
 
-
     def set_color(self, line):
         if self.equal_list[line]["status"] == "initial":
             if line == self.current_line:
@@ -75,18 +74,6 @@ class Window():
         elif self.equal_list[line]["status"] == "suspect":
             self.ui.csvDisplayer.item(line).setBackground(self.yellowBrush)
 
-    # def set_code(self, line):
-    #     self.ui.code1_label.setText(self.equal_list[line]["file1"])
-    #     self.ui.code2_label.setText(self.equal_list[line]["file2"])
-    #     with open(self.equal_list[line]["file1"]) as f1:
-    #         with open(self.equal_list[line]["file2"]) as f2:
-    #             content1 = f1.read()
-    #             content2 = f2.read()
-    #             f1.close()
-    #             f2.close()
-    #             self.ui.codeBox1.setText(content1)
-    #             self.ui.codeBox2.setText(content2)
- # self.equal_list[line]["file2"]
     def set_code(self, line):
         file1 = self.equal_list[line]["file1"]
         file2 = self.equal_list[line]["file2"]
