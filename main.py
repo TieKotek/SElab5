@@ -27,10 +27,10 @@ def path_check(path):
             equal_dict = csv.DictReader(equal)
             inequal_dict = csv.DictReader(inequal)
             for row in equal_dict:
-                if not os.path.exists(row["file1"]) or not os.path.exists(row["file2"]):
+                if not os.path.exists(os.path.join(path, row["file1"])) or not os.path.exists(os.path.join(path, row["file2"])):
                     return False
             for row in inequal_dict:
-                if not os.path.exists(row["file1"]) or not os.path.exists(row["file2"]):
+                if not os.path.exists(os.path.join(path, row["file1"])) or not os.path.exists(os.path.join(path, row["file2"])):
                     return False
             equal.close()
             inequal.close()
@@ -38,7 +38,7 @@ def path_check(path):
         with open(os.path.join(path, "suspect.csv")) as suspect:
             suspect_dict = csv.DictReader(suspect)
             for row in suspect_dict:
-                if not os.path.exists(row["file1"]) or not os.path.exists(row["file2"]):
+                if not os.path.exists(os.path.join(path, row["file1"])) or not os.path.exists(os.path.join(path, row["file2"])):
                     return False
     return True
 
@@ -75,10 +75,10 @@ class Window():
             self.ui.csvDisplayer.item(line).setBackground(self.yellowBrush)
 
     def set_code(self, line):
-        file1 = self.equal_list[line]["file1"]
-        file2 = self.equal_list[line]["file2"]
+        file1 = os.path.join(self.file_path, self.equal_list[line]["file1"])
+        file2 = os.path.join(self.file_path, self.equal_list[line]["file2"])
         self.ui.code_label.setText(f"Code1:{file1}\tCode2: {file2}")
-        html = compare_file(self.equal_list[line]["file1"], self.equal_list[line]["file2"])
+        html = compare_file(file1, file2)
         self.ui.webview.setHtml(html)
 
     def __init__(self):
