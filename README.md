@@ -66,6 +66,8 @@
 
 为了便于用户使用，使用了pyinstaller对程序进行打包发布，这使得用户可以在不安装python解释器和PySide2的条件下运行程序，只需在根目录下的dist/main中，运行main.exe即可。
 
+**因为文件过大，在提交的文件夹中没有dist/main目录，若需要可以到[TieKotek/SElab5: 软件工程实验5 (github.com)](https://github.com/TieKotek/SElab5)下载。**
+
 ![release](images/release.png)
 
 （点击main.exe即可运行，不需特意安装环境）
@@ -84,7 +86,7 @@
 
 创建一些基本文件，并进行第一次提交。
 
-![first commit](images/first commit.png)
+![first commit](images/first_commit.png)
 
 
 
@@ -106,8 +108,15 @@
 
 经过测试，对源代码进行了一些修改，使用git diff展示修改前后的区别：
 
-![git diff](images/git diff.png)
+![git_diff](images/git_diff.png)
 
 
 
-本次实验的代码可以在[TieKotek/SElab5: 软工第四次实验 (github.com)](https://github.com/TieKotek/SElab5)中找到。
+push到远程仓库
+
+![push](images/push.png)
+
+
+
+本次实验的代码可以在[TieKotek/SElab5: 软件工程实验5 (github.com)](https://github.com/TieKotek/SElab5)中找到。
+
