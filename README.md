@@ -54,7 +54,7 @@
 
 当用户打算结束本次比对的时候，可以点击右下角的“结束本次比对并保存”按钮。此时，选中目录中的部分文件内容将被改写，具体而言：equal.csv和inequal.csv中的内容将会根据用户对程序对的状态改变进行重写。特别的是，如果退出时仍有存疑程序，将生成一个新的suspect.csv文件，其中保存了被标记为存疑的程序对。当下一次加载该文件夹时，这些存疑的程序对将被置顶，且高亮标记为黄色。**这个功能为用户分多次进行人工比对提供了便利。**
 
-![restart](E:\Study\大三上\软工\lab5\lab5-code\images\restart.png)
+![restart](images/restart.png)
 
 （保存后重新打开将把上次保存时被标记为存疑的程序高亮并置顶）
 
@@ -106,4 +106,8 @@
 
 经过测试，对源代码进行了一些修改，使用git diff展示修改前后的区别：
 
-![git diff](E:\Study\大三上\软工\lab5\lab5-code\images\git diff.png)
+![git diff](images/git diff.png)
+
+
+
+本次实验的代码可以在[TieKotek/SElab5: 软工第四次实验 (github.com)](https://github.com/TieKotek/SElab5)中找到。
